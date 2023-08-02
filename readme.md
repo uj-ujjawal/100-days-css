@@ -19,6 +19,12 @@ You can also see my progress on this journey by visiting the following link:
 
 <https://100dayscss.com/progress/toddler001/>
 
+## Template
+
+You can follow start with this simple template, which you can find in the "template" folder
+
+- [template](./template/)
+
 ## Join Me on this Journey
 
 If you're interested in CSS or web design, I invite you to join me on this exciting challenge. Whether you are a beginner or an experienced developer, there's always something new to learn in the world of CSS. Let's have fun, grow as designers, and inspire each other throughout this journey.
