@@ -1,0 +1,171 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  width: 40rem;
+  height: 40rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
+  background: #40af82;
+}
+
+.bars:click {
+  background: red;
+}
+
+.bar {
+  width: 9rem;
+  height: 1rem;
+  background: #fff;
+  border-radius: 0.4rem;
+  box-shadow: 0 2px 7px 0 rgba(0, 0, 0, 0.5);
+}
+.bar + .bar {
+  margin-top: 1.5rem;
+}
+.bar-1,
+.bar-3 {
+  z-index: 2;
+}
+.bar-2 {
+  position: relative;
+  z-index: 0;
+}
+
+/* reset */
+.bars.rest div {
+  animation: none;
+}
+
+.bars.clicked .bar-2 {
+  animation: anime-two 0.7s forwards;
+}
+
+@keyframes anime-two {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0);
+  }
+}
+
+/* hiding bar-2 */
+.bars.clicked .bar-2 {
+  animation: scale-down 0.2s forwards;
+}
+
+@keyframes scale-down {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0);
+  }
+}
+
+/* move bar1 and bar 3 to bar-2 place */
+.bars.clicked .bar-1 {
+  animation: go-down 0.5s ease-in-out forwards;
+}
+.bars.clicked .bar-3 {
+  animation: go-up 0.5s ease-in-out forwards;
+}
+
+@keyframes go-down {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(2.5rem);
+  }
+  100% {
+    transform: translateY(2.5rem) rotateZ(45deg);
+  }
+}
+
+@keyframes go-up {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-2.5rem);
+  }
+  100% {
+    transform: translateY(-2.5rem) rotateZ(135deg);
+  }
+}
+
+/* reverse - animation --bar2 */
+.bars .bar-2 {
+  animation: scale-down-rev 0.9s forwards;
+}
+
+@keyframes scale-down-rev {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* reverse-animation --bar1 */
+
+.bars .bar-1 {
+  animation: go-down-rev 0.7s ease-in-out forwards;
+}
+
+@keyframes go-down-rev {
+  0% {
+    transform: translateY(2.5rem) rotateZ(45deg);
+  }
+  50% {
+    transform: translateY(2.5rem) rotateZ(0deg);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+/* reverse-animation --bar3 */
+.bars .bar-3 {
+  animation: go-up-rev 0.7s ease-in-out forwards;
+}
+
+@keyframes go-up-rev {
+  0% {
+    transform: translateY(-2.5rem) rotateZ(135deg);
+  }
+  50% {
+    transform: translateY(-2.5rem) rotateZ(0deg);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+/* reset animation*/
+.reset .bar {
+  animation: none;
+}
