@@ -1,0 +1,129 @@
+/* 
+TODO 1: hve to apply Shadow on the pyramid and to it's bottom
+
+TODO 2: Have to apply animation on the shadow part
+
+TODO 3: learn to use cubic-bezier and transform-origin property properties
+*/
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  margin: 12rem 0;
+  justify-content: center;
+  /* align-items: center; */
+}
+
+.container {
+  width: 40rem;
+  height: 40rem;
+  display: flex;
+  border-radius: 0.5rem;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
+  background: #272c34;
+}
+
+.circle {
+  width: 20rem;
+  height: 20rem;
+  background-color: #79d8f3;
+  border-radius: 50%;
+  position: relative;
+  overflow: hidden;
+
+  animation: day-night 5s ease-in-out infinite;
+}
+
+@keyframes day-night {
+  0% {
+    filter: opacity(0);
+  }
+  50% {
+    filter: opacity(1);
+  }
+  100% {
+    filter: opacity(0);
+  }
+}
+
+.surface {
+  width: 22rem;
+  height: 6.79rem;
+  background: #efdf75;
+  position: absolute;
+  bottom: 0;
+  opacity: 1;
+}
+.sun-container {
+  position: relative;
+  width: 24rem;
+  height: 20rem;
+  top: 6rem;
+  right: 2rem;
+  border-radius: 50%;
+  /* background-color: aqua; */
+  animation: sunset-sunrise 5s ease-in-out infinite;
+}
+.sun {
+  width: 3.3rem;
+  height: 3.3rem;
+  border-radius: 50%;
+  position: absolute;
+  top: 7rem;
+  left: -2rem;
+  background: #ffef01;
+}
+@keyframes sunset-sunrise {
+  0% {
+    transform: rotate(0deg);
+  }
+  30% {
+    transform: rotate(38deg);
+  }
+  85% {
+    transform: rotate(165deg);
+  }
+  100% {
+    transform: rotate(260deg);
+  }
+}
+
+.left-pyramid {
+  width: 7rem;
+  height: 7rem;
+  position: absolute;
+  top: 6.2rem;
+  left: 2.5rem;
+  background: #f4f4f4;
+  clip-path: polygon(100% 100%, 15% 100%, 100% 30%);
+  z-index: 2;
+  animation: shadow-on-pyramid 4s iteration-count direction fill-mode;
+}
+
+.right-pyramid {
+  width: 7rem;
+  height: 7rem;
+  position: absolute;
+  top: 6.2rem;
+  left: 9.5rem;
+  background: #dddada;
+  clip-path: polygon(0% 100%, 0% 30%, 70% 100%);
+  /* 
+  animation: shadow-on-pyramid 5s ease-in-out infinite; */
+}
