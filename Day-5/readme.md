@@ -1,7 +1,12 @@
 # Day 5
 
-## Assignment
+## Assignment Objectives and Goals
 
-![Assginment](image.png)
+![Assignment](./assets/day5.gif)
 
-## My Work
+## My Accomplishments and Progress
+
+![my-work](./assets/op.png)
+
+---
+Note: Not 100% completed.
