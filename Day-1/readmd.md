@@ -1,9 +1,9 @@
 # Day 1
 
-## Assignment
+## AssignmentAssignment Objectives and Goals
 
 ![day1](./assets/day1.png)
 
-## My Output
+## ## My Accomplishments and Progress"
 
 ![output](./assets/output.png)

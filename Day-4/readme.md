@@ -1,9 +1,9 @@
 # Day 4
 
-## Task
+## Assignment Objectives and Goals
 
 ![input](assets/in_day4.gif)
 
-## Result
+## My Accomplishments and Progress
 
 ![output](assets/myday4.gif)

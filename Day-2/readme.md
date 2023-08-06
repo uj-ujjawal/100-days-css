@@ -1,9 +1,9 @@
 # Day 02
 
-## Task
+## Assignment Objectives and Goals
 
 ![day2task](./assets/day2Q.gif)
 
-## Final Result
+## My Accomplishments and Progress
 
 ![finalresult](./assets/result.gif)

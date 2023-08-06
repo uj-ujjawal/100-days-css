@@ -1,9 +1,9 @@
 # Day 3
 
-## Task
+## Assignment Objectives and Goals
 
 ![input](assets/inday3.gif)
 
-## Final Result
+## My Accomplishments and Progress"
 
 ![output](assets/opday3.gif)
